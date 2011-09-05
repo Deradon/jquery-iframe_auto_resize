@@ -1,6 +1,6 @@
 = JqueryIframeAutoResize
 
-JQuery Plugin to auto-resize iFrame from same domain.
+JQuery Plugin to auto-resize iFrames from same domain.
 
 == Incude in your application.js
 
@@ -12,12 +12,17 @@ JQuery Plugin to auto-resize iFrame from same domain.
 
   $(document).ready(function () {
     $('iframe').iframeAutoResize({
-      interval: 100,
-      minHeight: 200,
-      maxHeight: 800,
-      heightOffset: 5,
+      interval: 100,    // ms
+      minHeight: 200,   // px
+      maxHeight: 800,   // px
+      heightOffset: 5,  // px
       callback: function(){/*...*/},
       debug: false
      });
   });
+
+
+== Known Bugs:
+* Issues if margins on iFrames are used
+* Issues with IE if iframe with "frameborder='1'" is used
 

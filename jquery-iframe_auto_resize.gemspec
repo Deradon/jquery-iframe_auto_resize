@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Patrick Helm"]
   s.email       = ["deradon87@gmail.com", "patrick.helm@werbeboten.de"]
   s.homepage    = "http://www.deckel-gesucht.de"
-  s.summary     = "JQuery Plugin to auto-resize iFrame from same domain."
-  s.description = "JQuery Plugin to auto-resize iFrame from same domain."
+  s.summary     = "JQuery Plugin to auto-resize iFrames from same domain."
+  s.description = "JQuery Plugin to auto-resize iFrames from same domain."
 
   s.files = Dir["{app,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]

@@ -1,0 +1,30 @@
+:css
+  body{
+    border: 5px solid green;
+    background: red;
+    overflow: hidden;
+    padding: 5px;
+    margin: 5px;
+  }
+
+%p I am a
+%h1 Static#iframe_with_margin
+%p Find me in app/views/static/iframe_with_margin.html.haml
+
+:javascript
+  $(document).ready(function(){
+    function randomSize(){
+      $("body *").each(function(){
+        var randomnumber=Math.floor(Math.random()*100)
+        $(this).height(randomnumber+"px");
+      });
+      setTimeout(randomSize, 1000);
+    }
+
+    $("*").each(function(){
+      $(this).css("overflow", "hidden");
+    });
+
+    setTimeout(randomSize, 10);
+  });
+

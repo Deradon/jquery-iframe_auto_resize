@@ -1,0 +1,32 @@
+:css
+  .left{
+    padding-left:10px;
+    float:left;
+  }
+
+  .clear{
+    clear:both;
+  }
+
+%h1 Static#container
+%p Find me in app/views/static/container.html.haml
+
+.left
+  %iframe{:src => url_for(:controller => :static, :action => :iframe),
+          :scrolling => :no, :frameborder=>"0", :height => "0px"}
+
+.left
+  %iframe{:src => url_for(:controller => :static, :action => :iframe_with_margin),
+          :scrolling => :no, :frameborder=>"0", :height => "0px"}
+.clear
+
+:javascript
+  $(document).ready(function () {
+    $('iframe').iframeAutoResize({
+      interval: 100,
+      debug: false,
+      heightOffset: 0,
+      minHeight: 0
+     });
+  });
+

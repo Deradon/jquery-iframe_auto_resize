@@ -2,6 +2,12 @@
 
 JQuery Plugin to auto-resize iFrames from same domain.
 
+== Setup: put following to your Gemfile
+
+  ..
+  gem "jquery-iframe_auto_resize"
+  ..
+
 == Incude in your application.js
 
   ..

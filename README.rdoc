@@ -22,6 +22,8 @@ JQuery Plugin to auto-resize iFrames from same domain.
       minHeight: 200,   // px
       maxHeight: 800,   // px
       heightOffset: 5,  // px
+      animationSpeed: 500,    // in px / s
+      maxAnimationTime: 1000, // in ms
       callback: function(){/*...*/},
       debug: false
      });

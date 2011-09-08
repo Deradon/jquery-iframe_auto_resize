@@ -1,0 +1,6 @@
+= v.0.0.2
+
+Added options:
+* animationSpeed: 500,    #in px / s
+* maxAnimationTime: 1000, #in ms
+

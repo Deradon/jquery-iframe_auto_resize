@@ -15,10 +15,10 @@
   $(document).ready(function(){
     function randomSize(){
       $("body *").each(function(){
-        var randomnumber=Math.floor(Math.random()*100)
+        var randomnumber=Math.floor(Math.random()*300)
         $(this).height(randomnumber+"px");
       });
-      setTimeout(randomSize, 1000);
+      setTimeout(randomSize, 2000);
     }
 
     $("*").each(function(){

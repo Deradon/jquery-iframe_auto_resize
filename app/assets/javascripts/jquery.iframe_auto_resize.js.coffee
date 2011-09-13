@@ -11,6 +11,7 @@ $.fn.iframeAutoResize = (spec) ->
       alert(message)
 
   oldHeight = 0
+  interval_id = 0
 
   options = $.extend({
     interval: 0,
@@ -76,7 +77,12 @@ $.fn.iframeAutoResize = (spec) ->
 
 
   resizeHeight = (iframe) ->
-    $body = $(iframe).contents().find('body')
+    try
+      $body = $(iframe).contents().find('body')
+    catch error
+      clearInterval(interval_id)
+      return
+
     newHeight = computeHeight($body)
 
     if newHeight != oldHeight
@@ -99,7 +105,7 @@ $.fn.iframeAutoResize = (spec) ->
       $(this).attr('src', source)
 
       if options.interval != 0
-        setInterval(delayedResize, options.interval)
+        interval_id = setInterval(delayedResize, options.interval)
 
   init()
 

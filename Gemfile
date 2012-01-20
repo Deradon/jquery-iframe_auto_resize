@@ -16,7 +16,7 @@ gemspec
 
 #group :development, :test do
   gem 'jquery-rails'
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'coffee-rails', ">= 3.1.0"
   gem 'haml'
 #end
 
